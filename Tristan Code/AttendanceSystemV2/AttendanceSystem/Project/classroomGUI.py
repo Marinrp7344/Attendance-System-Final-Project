@@ -490,8 +490,8 @@ class ClassroomGUI:
         if self.imgPath != "" and self.studentFileSystem.ImagePathValid(self.imgPath): 
             # Upload picture to CurrentDayPicture directory
             self.studentFileSystem.AddImgOfTheDay(self.imgPath)
-
-            Extractfaces()  # Extract faces from current day 
+            
+            Extractfaces(self.imgPath, self.studentFileSystem.extractionPath)  # Extract faces from current day 
             facesNameArray = comapareFace() # Returns names of students who are in attendance from the extracted faces
 
             # Updates students attendance for the day
