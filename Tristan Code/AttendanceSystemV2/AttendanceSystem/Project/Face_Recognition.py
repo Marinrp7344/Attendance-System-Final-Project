@@ -16,7 +16,7 @@ Facial Extraction:
 peoplePresent = []
 totalConfidence = []
 mainDirectory = r"Project\Student_Encodings"
-compareDirectory = r"Project\ExtractedFaces"
+compareDirectory = r"Project\Extracted_Faces"
 
 # ------METHODS------ #
 

@@ -10,18 +10,18 @@ Facial Extraction:
 """
 # -----VARIABLES----- #
 
-path = r"C:\Dev\VSCode_Workspace\Unix_Class\AttendanceSystem\Project\CurrentDayPicture\Cage100.jpg"
-storedPath = "C:/Dev/VSCode_Workspace/Unix_Class/AttendanceSystem/Project/ExtractedFaces/"
+#path = r'C:\Users\Ricardo\OneDrive\Documents\GitHub\Attendance-System-Final-Project\Tristan Code\AttendanceSystemV2\AttendanceSystem\Project\CurrentDayPicture\DailyPhoto.jpg'
+storedPath = 'C:/Users/Ricardo/OneDrive/Documents/GitHub/Attendance-System-Final-Project/Tristan Code/AttendanceSystemV2/AttendanceSystem/Project/Extracted_Faces/'
 
 # ------METHODS------ #
 
 """Detects the faces in a picture"""
-def Extractfaces():
+def Extractfaces(imgPath, storedFaces):
     i = 0
-    image = cv.imread(path)
+    image = cv.imread(imgPath)
     gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
     #'haarcascade_frontalface_default.xml'
-    haar_cascade = cv.CascadeClassifier(r"C:\Dev\VSCode_Workspace\Unix_Class\AttendanceSystem\Project\haarcascade_frontalface_default.xml")
+    haar_cascade = cv.CascadeClassifier(r'C:\Users\Ricardo\OneDrive\Documents\GitHub\Attendance-System-Final-Project\Tristan Code\AttendanceSystemV2\AttendanceSystem\Project\haarcascade_frontalface_default.xml')
     faces_rect = haar_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=15)
     DrawRectangle(faces_rect, image)
     for (x,y,w,h) in faces_rect:

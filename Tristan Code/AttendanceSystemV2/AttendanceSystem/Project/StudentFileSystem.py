@@ -9,7 +9,7 @@ class Student_File:
     #-----Variables-----#
     studentPath = r"Project\Students"
     encodingsPath = r"Project\Student_Encodings"
-    extractionPath = r"Project\ExtractedFaces"
+    extractionPath = r"Project\Extracted_Faces"
     imgOfTheDayPath = r"Project\CurrentDayPicture"
 
     #-----Methods-----#
@@ -108,9 +108,10 @@ class Student_File:
             line = file.readline()
             if line == "":
                 break
+            print(line)
             lineList = line.split(",")
-            lineList[1] = lineList[1].removesuffix("\n")
-            if lineList[1] == "1":
+            #lineList[1] = lineList[1].removesuffix("\n")
+            if lineList[1] == "1\n":
                 numPresent += 1
             numTotal += 1
         file.close()
