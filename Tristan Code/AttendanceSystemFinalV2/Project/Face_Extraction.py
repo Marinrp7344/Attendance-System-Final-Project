@@ -12,7 +12,7 @@ Facial Extraction:
 
 #path = r"C:\Dev\VSCode_Workspace\Unix_Class\AttendanceSystem\Project\CurrentDayPicture\Cage100.jpg"
 #storedPath = "C:/Dev/VSCode_Workspace/Unix_Class/AttendanceSystem/Project/ExtractedFaces/"
-ePath = "Project/ExtractedFaces/"
+ePath = "Project/Extracted_Faces/"
 
 # ------METHODS------ #
 

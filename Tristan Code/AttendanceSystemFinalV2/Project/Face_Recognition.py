@@ -16,7 +16,7 @@ Facial Extraction:
 peoplePresent = []
 totalConfidence = []
 mainDirectory = r"Project\Student_Encodings"
-compareDirectory = r"Project\ExtractedFaces"
+compareDirectory = r"Project\Extracted_Faces"
 
 # ------METHODS------ #
 
@@ -40,7 +40,6 @@ def comapareFace():
         for student in os.listdir(mainDirectory): 
             #joins the path with a fie to access every individual student file
             newPath = os.path.join(mainDirectory, student)
-            print(newPath)
             name.append(student)
             #counts the number of faces that match and don't to generate a confidence level
             rightFace = 0.0
@@ -57,8 +56,6 @@ def comapareFace():
                     rightFace += 1
                 elif(result[0] == False):
                     wrongFace += 1
-            print(rightFace)
-            print(wrongFace)
             #appends the confidence level to the array
             confidence.append(addConfidence(rightFace, wrongFace))
         #After going through each image in every file it determines if the person is present

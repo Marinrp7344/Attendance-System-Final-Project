@@ -9,7 +9,7 @@ class Student_File:
     #-----Variables-----#
     studentPath = r"Project\Students"
     encodingsPath = r"Project\Student_Encodings"
-    extractionPath = r"Project\ExtractedFaces"
+    extractionPath = r"Project\Extracted_Faces"
     imgOfTheDayPath = r"Project\CurrentDayPicture"
 
     #-----Methods-----#
@@ -106,6 +106,7 @@ class Student_File:
 
     """ Adds a txt file to the students folder"""
     def addAttendanceSheet(self, destinationFolder):
+        print(destinationFolder +"\\attendanceSheet.txt") 
         open(destinationFolder + ("\\attendanceSheet.txt"), "x")
     
     """ Writes to the students attendance sheet """

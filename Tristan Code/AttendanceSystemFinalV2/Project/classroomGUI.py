@@ -427,7 +427,8 @@ class ClassroomGUI:
         # Check if name/paths are valid and that paths do not already exist
         if isNameValid and isFolderPathValid and not self.studentFileSystem.PathExists(studentPath):
             # Create and add unique student to the students list
-            txtFilePath = self.studentFileSystem.studentPath + ("\\" + studentPath)
+            txtFilePath = self.studentFileSystem.studentPath + ("\\" + fullName)
+            print(studentPath)
             studentData = StudentData(os.path.basename(studentPath), self.studentFileSystem.getStudentAttendanceSheetPath(txtFilePath))
             self.students.append(studentData)
 
